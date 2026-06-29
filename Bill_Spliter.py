@@ -1,13 +1,21 @@
-
 while True:
-    print("WELCOME TO BLL SPLITTER APP..!")
- 
+    print("")
+    print("*"*50)
+    print("      ...WELCOME TO BLL SPLITTER APP...      ")
+    print("*"*50)
     print("")
  
     bill=float(input("Enter Total Bill Amount:- "))
+    if bill<=0:
+          print(" ERROR, The amount of bill should not be zero or less than zero...! ")
+          continue
+    
     people=int(input("Enter Number Of People:- "))
+    
     tip=float(input("Enter tip percentage(0/5/10/15/20):- "))
+    
     print("")
+    
 
     Tip_amount=(tip/100)*bill    
     print(f"Tip Amount:- {Tip_amount}")
@@ -21,15 +29,12 @@ while True:
     print(f"Per Person:- {per_person}")
     print("")
         
+
+
     again=input("Would you like to calculate another bill? (yes/no) :")
-    print("")
-    if again.lower()!="yes":
-      print("THANK YOU! for using Bill Splitter App. ")
-      break
-    continue
-    
-    
 
-    
-
-  
+    if again=='no':
+        print("Thank you! for using bill splitter app.")
+        break
+    if again=='yes':
+        continue
